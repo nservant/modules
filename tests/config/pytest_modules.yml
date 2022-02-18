@@ -82,6 +82,10 @@ bbmap/index:
   - modules/bbmap/index/**
   - tests/modules/bbmap/index/**
 
+bbmap/pileup:
+  - modules/bbmap/pileup/**
+  - tests/modules/bbmap/pileup/**
+
 bcftools/concat:
   - modules/bcftools/concat/**
   - tests/modules/bcftools/concat/**
