@@ -1,0 +1,42 @@
+name: "cooltools_insulation"
+description: Calculate the insulation score genome-wide
+keywords:
+  - insulation
+  - tads
+tools:
+  - "cooltools":
+      description: "Analysis tools for genomic interaction data stored in .cool format"
+      homepage: "https://cooltools.readthedocs.io"
+      documentation: "https://cooltools.readthedocs.io"
+      tool_dev_url: "https://github.com/open2c/cooltools"
+      doi: "10.5281/zenodo.5214125"
+      licence: "['MIT']"
+
+input:
+  - meta:
+      type: map
+      description: |
+        Groovy Map containing sample information
+        e.g. [ id:'test', single_end:false ]
+  - cool:
+      type: file
+      description: COOL file
+      pattern: "*.cool"
+
+output:
+  - meta:
+      type: map
+      description: |
+        Groovy Map containing sample information
+        e.g. [ id:'test', single_end:false ]
+  - versions:
+      type: file
+      description: File containing software versions
+      pattern: "versions.yml"
+  - tsv
+      type: file
+      description: Text file with insulation score and TADs boundaries
+      pattern: "*.tsv"
+
+authors:
+  - "@nservant"

@@ -543,6 +543,14 @@ cooler/zoomify:
   - modules/cooler/zoomify/**
   - tests/software/cooler/zoomify/**
 
+cooltools/eigscis:
+  - modules/cooltools/eigscis/**
+  - tests/modules/cooltools/eigscis/**
+
+cooltools/insulation:
+  - modules/cooltools/insulation/**
+  - tests/modules/cooltools/insulation/**
+
 csvtk/concat:
   - modules/csvtk/concat/**
   - tests/modules/csvtk/concat/**

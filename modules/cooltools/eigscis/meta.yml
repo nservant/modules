@@ -1,0 +1,49 @@
+name: "cooltools_eigscis"
+description: Perform eigen value decomposition to calculate chromosome compartment signal
+keywords:
+  - compartments
+tools:
+  - "cooltools":
+      description: "Analysis tools for genomic interaction data stored in .cool format"
+      homepage: "https://cooltools.readthedocs.io"
+      documentation: "https://cooltools.readthedocs.io"
+      tool_dev_url: "https://github.com/open2c/cooltools"
+      doi: "10.5281/zenodo.5214125"
+      licence: "['MIT']"
+
+input:
+  - meta:
+      type: map
+      description: |
+        Groovy Map containing sample information
+        e.g. [ id:'test', single_end:false ]
+  - cool:
+      type: file
+      description: COOL file
+      pattern: "*.cool"
+  - resolution:
+      type: value
+      description: bin size resolution
+  - fasta
+      type: file
+      description: reference genome fasta file 
+  - chrsize
+      type: file
+      description: chromosome size file
+
+output:
+  - meta:
+      type: map
+      description: |
+        Groovy Map containing sample information
+        e.g. [ id:'test', single_end:false ]
+  - versions:
+      type: file
+      description: File containing software versions
+      pattern: "versions.yml"
+  - results
+      type: file
+      description: compartments tracks and output files
+
+authors:
+  - "@nservant"
